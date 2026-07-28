@@ -1,0 +1,48 @@
+import type { Organization } from '../../types'
+
+export const organizations: Organization[] = [
+  {
+    id: 'org_saathi',
+    slug: 'saathi-foundation',
+    name: 'Saathi Foundation',
+    location: 'Bengaluru',
+    verified: true,
+    founded: 2012,
+    regNumber: 'KA/2012/0043821',
+    website: 'saathifoundation.org',
+    mission: 'Community health, nutrition and safety programs across Karnataka and Odisha.',
+  },
+  {
+    id: 'org_nirmaljal',
+    slug: 'nirmal-jal-trust',
+    name: 'Nirmal Jal Trust',
+    location: 'Pune',
+    verified: true,
+    founded: 2009,
+    regNumber: 'MH/2009/0021147',
+    website: 'nirmaljaltrust.org',
+    mission: 'Clean water infrastructure for rural Maharashtra and Vidarbha.',
+  },
+  {
+    id: 'org_prayaas',
+    slug: 'prayaas-education-society',
+    name: 'Prayaas Education Society',
+    location: 'Jaipur',
+    verified: true,
+    founded: 2016,
+    regNumber: 'RJ/2016/0038220',
+    website: 'prayaaseducation.org',
+    mission: 'Scholarships and digital classrooms for underserved students in Rajasthan.',
+  },
+  {
+    id: 'org_greenroots',
+    slug: 'green-roots-collective',
+    name: 'Green Roots Collective',
+    location: 'Kochi',
+    verified: false,
+    founded: 2020,
+    regNumber: 'KL/2020/0009931',
+    website: 'greenrootscollective.org',
+    mission: 'Disaster relief and environmental restoration across Kerala.',
+  },
+]
