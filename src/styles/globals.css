@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f5f4fa;
+  --border: #e7e5f0;
+  --text: #14111f;
+  --text-2: #56516e;
+  --text-3: #8b859f;
+  --primary: #4f46e5;
+  --violet: #7c3aed;
+  --accent: #c026d3;
+  --success: #059669;
+  --success-soft: #ecfdf5;
+  --warning: #f59e0b;
+  --danger: #dc2626;
+}
+
+.dark {
+  --bg: #08060f;
+  --surface: #120c22;
+  --surface-2: #1a1230;
+  --border: #2a2044;
+  --text: #f6f4ff;
+  --text-2: #b5add4;
+  --text-3: #8078a0;
+  --primary: #818cf8;
+  --violet: #a78bfa;
+  --accent: #e879f9;
+  --success: #34d399;
+  --success-soft: #06251c;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
