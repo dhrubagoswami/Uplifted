@@ -65,7 +65,7 @@ export default function AccountOverview() {
         </div>
       )}
 
-      <div className="mb-7 flex items-center justify-between rounded-2xl bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] p-6">
+      <div className="mb-7 flex items-center justify-between rounded-2xl bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] p-6">
         <div>
           <div className="font-sans text-[13px] text-white/85">Your impact so far</div>
           <div className="mt-1 font-display text-[22px] font-semibold text-white">

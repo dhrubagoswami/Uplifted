@@ -20,7 +20,7 @@ export function AccountRail() {
     <div className="flex flex-shrink-0 flex-col gap-1 border-b border-border bg-surface-2/40 p-3 lg:min-h-screen lg:w-[220px] lg:border-b-0 lg:border-r">
       <div className="mb-1 flex items-center justify-between gap-2.5 px-1 py-1 lg:mb-5 lg:flex-col lg:items-stretch lg:px-2 lg:py-0">
         <Link to="/" className="flex items-center gap-2.5 px-2 py-2 no-underline">
-          <span className="h-6 w-6 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3]" />
+          <span className="h-6 w-6 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
           <span className="font-display text-[15px] font-bold text-text">Uplifted</span>
         </Link>
         <div className="flex items-center gap-2 px-1 lg:hidden">
@@ -47,7 +47,7 @@ export function AccountRail() {
               to={item.href}
               className={cn(
                 'flex flex-shrink-0 items-center gap-2.5 whitespace-nowrap rounded-[10px] px-3 py-2.5 font-sans text-sm font-medium no-underline',
-                active ? 'bg-surface-2 text-primary' : 'text-text-2 hover:text-text',
+                active ? 'bg-accent-soft text-primary' : 'text-text-2 hover:text-text',
               )}
             >
               <span className={cn('h-2 w-2 flex-shrink-0 rounded-sm', active ? 'bg-primary' : 'bg-text-2')} />

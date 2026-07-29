@@ -10,7 +10,7 @@ export default function NotFound() {
       </p>
       <Link
         to="/"
-        className="mt-2 rounded-[10px] bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] px-6 py-3 font-sans text-[14.5px] font-semibold text-white no-underline"
+        className="mt-2 rounded-[10px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] px-6 py-3 font-sans text-[14.5px] font-semibold text-white no-underline"
       >
         Back to home
       </Link>

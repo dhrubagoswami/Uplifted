@@ -16,12 +16,12 @@ export default function KioskAttract() {
     <div
       className="motion-safe:animate-[gradient-drift_14s_ease-in-out_infinite] flex min-h-screen flex-col items-center justify-center gap-10 px-8 py-16 text-white"
       style={{
-        background: 'linear-gradient(135deg,#08060F,#1a1040,#3b1550,#08060F)',
+        background: 'linear-gradient(135deg,#0A120B,#12241A,#1C3628,#0A120B)',
         backgroundSize: '300% 300%',
       }}
     >
       <div className="flex items-center gap-2.5">
-        <span className="h-8 w-8 rounded-[9px] bg-gradient-to-br from-[#6366F1] via-[#A78BFA] to-[#E879F9]" />
+        <span className="h-8 w-8 rounded-[9px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0]" />
         <span className="font-display text-[22px] font-bold">Uplifted</span>
       </div>
 
@@ -50,7 +50,7 @@ export default function KioskAttract() {
 
       <Link
         to="/kiosk/browse"
-        className="motion-safe:animate-[pulse-touch_2s_ease-in-out_infinite] rounded-full bg-gradient-to-br from-[#6366F1] via-[#A78BFA] to-[#E879F9] px-11 py-5 text-center font-sans text-xl font-semibold text-white no-underline shadow-[0_8px_40px_rgba(129,140,248,.4)]"
+        className="motion-safe:animate-[pulse-touch_2s_ease-in-out_infinite] rounded-full bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0] px-11 py-5 text-center font-sans text-xl font-semibold text-white no-underline shadow-[0_8px_40px_rgba(143,203,160,.4)]"
         style={{ minHeight: 72 }}
       >
         Touch anywhere to begin

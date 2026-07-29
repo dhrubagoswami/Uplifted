@@ -89,7 +89,7 @@ export default function AdminCampaigns() {
                 onClick={() => setStatusFilter(s)}
                 className={cn(
                   'rounded-full border px-3.5 py-1.5 font-sans text-[12.5px] font-medium',
-                  active ? 'border-primary bg-surface-2 text-primary' : 'border-border bg-transparent text-text-2',
+                  active ? 'border-primary bg-accent-soft text-primary' : 'border-border bg-transparent text-text-2',
                 )}
               >
                 {s === 'all' ? 'All' : STATUS_LABEL[s]}

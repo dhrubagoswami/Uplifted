@@ -96,7 +96,7 @@ export default function KioskBrowse() {
                     <div className="font-sans text-sm font-semibold leading-tight text-text">{c.title}</div>
                     <div className="mt-auto h-[5px] overflow-hidden rounded-full bg-surface">
                       <div
-                        className="h-full rounded-full bg-gradient-to-r from-[#6366F1] to-[#A78BFA]"
+                        className="h-full rounded-full bg-gradient-to-r from-[#3F7A5C] to-[#5B9E77]"
                         style={{ width: `${pct}%` }}
                       />
                     </div>

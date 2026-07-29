@@ -46,7 +46,7 @@ export function SiteHeader({ heroMode = false }: SiteHeaderProps) {
     >
       <div className="mx-auto flex h-[76px] max-w-[1240px] items-center justify-between gap-4 px-5 sm:px-8 lg:gap-6 lg:px-12">
         <Link to="/" className="flex flex-shrink-0 items-center gap-2.5 no-underline">
-          <span className="h-[30px] w-[30px] flex-shrink-0 rounded-[9px] bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3]" />
+          <span className="h-[30px] w-[30px] flex-shrink-0 rounded-[9px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
           <span className="font-display text-[19px] font-bold tracking-[-0.02em] text-text">
             Uplifted
           </span>
@@ -88,7 +88,7 @@ export function SiteHeader({ heroMode = false }: SiteHeaderProps) {
           </Link>
           <Link
             to="/campaigns"
-            className="rounded-[10px] bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] px-5 py-2.5 font-sans text-[14.5px] font-semibold text-white no-underline shadow-[0_8px_32px_rgba(79,70,229,.28)] transition-transform hover:-translate-y-px"
+            className="rounded-[10px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] px-5 py-2.5 font-sans text-[14.5px] font-semibold text-white no-underline shadow-[0_8px_32px_rgba(63,122,92,.28)] transition-transform hover:-translate-y-px"
           >
             Donate now
           </Link>
@@ -136,7 +136,7 @@ export function SiteHeader({ heroMode = false }: SiteHeaderProps) {
                 onClick={() => setMenuOpen(false)}
                 className={cn(
                   'rounded-lg px-3 py-3 font-sans text-[15px] font-medium no-underline',
-                  active ? 'bg-surface-2 text-primary' : 'text-text-2 hover:bg-surface-2 hover:text-text',
+                  active ? 'bg-accent-soft text-primary' : 'text-text-2 hover:bg-surface-2 hover:text-text',
                 )}
               >
                 {item.label}
@@ -158,7 +158,7 @@ export function SiteHeader({ heroMode = false }: SiteHeaderProps) {
         <Link
           to="/campaigns"
           onClick={() => setMenuOpen(false)}
-          className="mt-auto rounded-[10px] bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] px-5 py-3.5 text-center font-sans text-[15px] font-semibold text-white no-underline"
+          className="mt-auto rounded-[10px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] px-5 py-3.5 text-center font-sans text-[15px] font-semibold text-white no-underline"
         >
           Donate now
         </Link>

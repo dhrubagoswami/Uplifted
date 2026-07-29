@@ -65,7 +65,7 @@ export default function KioskCampaignDetail() {
 
       <Link
         to={`/kiosk/give/${campaign.slug}`}
-        className="mx-6 mb-7 flex items-center justify-center rounded-[20px] bg-gradient-to-br from-[#6366F1] via-[#A78BFA] to-[#E879F9] text-center font-sans text-xl font-bold text-white no-underline"
+        className="mx-6 mb-7 flex items-center justify-center rounded-[20px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0] text-center font-sans text-xl font-bold text-white no-underline"
         style={{ minHeight: 72, padding: 22 }}
       >
         Give now

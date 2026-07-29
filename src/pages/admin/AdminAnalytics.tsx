@@ -4,11 +4,11 @@ import { Skeleton } from '../../components/ui/Skeleton'
 import { ErrorState } from '../../components/ui/ErrorState'
 
 const CHANNEL_COLORS: Record<string, string> = {
-  UPI: '#4F46E5',
-  Card: '#7C3AED',
-  'Net Banking': '#C026D3',
-  Wallet: '#818CF8',
-  PayPal: '#A78BFA',
+  UPI: '#3F7A5C',
+  Card: '#5B9E77',
+  'Net Banking': '#7FBF8C',
+  Wallet: '#8FCBA0',
+  PayPal: '#2F5F47',
 }
 
 // TODO(design): weekly new-vs-returning bars, average-gift trend, and
@@ -41,7 +41,7 @@ export default function AdminAnalytics() {
   const channelQuery = useChannelSplit()
   const retentionQuery = useRetention()
 
-  const channels = (channelQuery.data ?? []).map((c) => ({ ...c, color: CHANNEL_COLORS[c.method] ?? '#818CF8' }))
+  const channels = (channelQuery.data ?? []).map((c) => ({ ...c, color: CHANNEL_COLORS[c.method] ?? '#8FCBA0' }))
   const donutStops = channels
     .reduce<{ stops: string[]; acc: number }>(
       (state, c) => {
@@ -145,7 +145,7 @@ export default function AdminAnalytics() {
                         background:
                           val === undefined
                             ? 'var(--surface-2)'
-                            : `rgba(79,70,229,${0.1 + (val / 100) * 0.6})`,
+                            : `rgba(63,122,92,${0.1 + (val / 100) * 0.6})`,
                         color: val !== undefined && val > 60 ? '#fff' : 'var(--text)',
                       }}
                     >

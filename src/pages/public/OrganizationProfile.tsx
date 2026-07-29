@@ -30,9 +30,9 @@ const REPORTS = [
   { title: 'Annual audit 2025', size: 'PDF · 3.4 MB' },
 ]
 const ALLOCATION = [
-  { label: 'Program delivery', pct: 82, color: '#4F46E5' },
-  { label: 'Operations', pct: 12, color: '#7C3AED' },
-  { label: 'Fundraising', pct: 6, color: '#C026D3' },
+  { label: 'Program delivery', pct: 82, color: '#3F7A5C' },
+  { label: 'Operations', pct: 12, color: '#5B9E77' },
+  { label: 'Fundraising', pct: 6, color: '#7FBF8C' },
 ]
 const TEAM = [
   { name: 'Vikram Menon', role: 'Program Director', initial: 'V' },
@@ -74,7 +74,7 @@ export default function OrganizationProfile() {
 
   return (
     <div>
-      <div className="h-[200px] bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3]" />
+      <div className="h-[200px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
       <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
         <div className="-mt-11 mb-7 flex items-end gap-5">
           <div className="flex h-24 w-24 items-center justify-center rounded-[20px] border-4 border-bg bg-surface font-display text-[32px] font-bold text-primary">
@@ -163,7 +163,7 @@ export default function OrganizationProfile() {
                 key={r.title}
                 className="flex items-center gap-3 rounded-[14px] border border-border bg-surface p-4"
               >
-                <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-surface-2 text-primary">
+                <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-[10px] bg-accent-soft text-primary">
                   <FileText size={16} />
                 </span>
                 <div>

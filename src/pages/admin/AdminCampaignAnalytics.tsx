@@ -9,10 +9,10 @@ import { EmptyState } from '../../components/ui/EmptyState'
 import { timeAgo } from '../../lib/format'
 
 const SOURCES = [
-  { label: 'Web', pct: 52, color: '#4F46E5' },
-  { label: 'Kiosk', pct: 24, color: '#7C3AED' },
-  { label: 'Social', pct: 16, color: '#C026D3' },
-  { label: 'Email', pct: 8, color: '#818CF8' },
+  { label: 'Web', pct: 52, color: '#3F7A5C' },
+  { label: 'Kiosk', pct: 24, color: '#5B9E77' },
+  { label: 'Social', pct: 16, color: '#7FBF8C' },
+  { label: 'Email', pct: 8, color: '#8FCBA0' },
 ]
 
 function donationTrendPoints(count: number): string {

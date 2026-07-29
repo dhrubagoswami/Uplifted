@@ -168,7 +168,7 @@ export default function KioskGive() {
             type="button"
             onClick={() => setStep('pay')}
             disabled={amount <= 0}
-            className="mt-auto rounded-[20px] bg-gradient-to-br from-[#6366F1] via-[#A78BFA] to-[#E879F9] font-sans text-xl font-bold text-white disabled:opacity-50"
+            className="mt-auto rounded-[20px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0] font-sans text-xl font-bold text-white disabled:opacity-50"
             style={{ minHeight: 80 }}
           >
             Continue
@@ -206,7 +206,7 @@ export default function KioskGive() {
             type="button"
             onClick={() => void handleSimulatedPayment()}
             disabled={processing}
-            className="rounded-[20px] bg-gradient-to-br from-[#6366F1] via-[#A78BFA] to-[#E879F9] px-10 font-sans text-lg font-bold text-white disabled:opacity-60"
+            className="rounded-[20px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0] px-10 font-sans text-lg font-bold text-white disabled:opacity-60"
             style={{ minHeight: 72 }}
           >
             {processing ? 'Processing…' : 'Simulate payment'}
@@ -252,7 +252,7 @@ export default function KioskGive() {
               type="button"
               onClick={() => void finish()}
               disabled={processing}
-              className="flex-1 rounded-[20px] bg-gradient-to-br from-[#6366F1] via-[#A78BFA] to-[#E879F9] font-sans text-lg font-bold text-white disabled:opacity-60"
+              className="flex-1 rounded-[20px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0] font-sans text-lg font-bold text-white disabled:opacity-60"
               style={{ minHeight: 72 }}
             >
               {processing ? 'Sending…' : 'Send receipt'}

@@ -24,7 +24,7 @@ export default function AdminLoginPage() {
     <div className="dark flex min-h-screen items-center justify-center bg-bg p-6">
       <div className="w-full max-w-[400px] rounded-[20px] border border-border bg-surface p-9 shadow-[0_20px_60px_rgba(0,0,0,.6)]">
         <div className="mb-7 flex items-center gap-2.5">
-          <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#6366F1] via-[#A78BFA] to-[#E879F9]" />
+          <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0]" />
           <span className="font-display text-[17px] font-bold text-text">Uplifted</span>
           <span className="ml-auto rounded-md bg-surface-2 px-2 py-1 font-sans text-[11px] font-semibold uppercase tracking-[0.06em] text-text-2">
             Org admin
@@ -54,7 +54,7 @@ export default function AdminLoginPage() {
           <button
             type="submit"
             disabled={isLoading}
-            className="mt-1 rounded-[10px] bg-gradient-to-br from-[#6366F1] via-[#A78BFA] to-[#E879F9] py-3.5 text-center font-sans text-[14.5px] font-semibold text-white disabled:opacity-60"
+            className="mt-1 rounded-[10px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0] py-3.5 text-center font-sans text-[14.5px] font-semibold text-white disabled:opacity-60"
           >
             {isLoading ? 'Signing in…' : 'Sign in'}
           </button>

@@ -6,7 +6,7 @@ import { Skeleton } from '../../components/ui/Skeleton'
 import { ErrorState } from '../../components/ui/ErrorState'
 import { Button } from '../../components/ui/Button'
 
-const CONFETTI_COLORS = ['#4F46E5', '#7C3AED', '#C026D3', '#818CF8']
+const CONFETTI_COLORS = ['#3F7A5C', '#5B9E77', '#7FBF8C', '#8FCBA0']
 
 // Deterministic per page-load, computed once at module scope so it stays
 // pure across renders (no Math.random() calls during render).
@@ -100,7 +100,7 @@ export default function DonationSuccess() {
       </div>
 
       {donation.frequency === 'once' && (
-        <div className="flex w-full items-center justify-between gap-4 rounded-[18px] bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] p-6 text-left">
+        <div className="flex w-full items-center justify-between gap-4 rounded-[18px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] p-6 text-left">
           <div>
             <div className="font-sans text-[15px] font-semibold text-white">Make this monthly?</div>
             <div className="mt-0.5 font-sans text-[13px] text-white/85">

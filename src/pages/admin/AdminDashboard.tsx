@@ -13,7 +13,7 @@ const RANGES: RevenueRange[] = ['7d', '30d', '90d']
 const ALERTS = [
   { color: '#D97706', text: '2 campaigns ending within 3 days' },
   { color: '#DC2626', text: 'Green Roots Collective verification expiring in 14 days' },
-  { color: '#4F46E5', text: 'Indiranagar Metro kiosk offline for 4 hours' },
+  { color: '#3F7A5C', text: 'Indiranagar Metro kiosk offline for 4 hours' },
 ]
 
 function sparklinePoints(values: number[]): string {

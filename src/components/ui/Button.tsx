@@ -12,7 +12,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    'text-white bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] shadow-[0_8px_32px_rgba(79,70,229,.28)] hover:-translate-y-px hover:shadow-[0_12px_36px_rgba(79,70,229,.36)]',
+    'text-white bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] shadow-[0_8px_32px_rgba(63,122,92,.28)] hover:-translate-y-px hover:shadow-[0_12px_36px_rgba(63,122,92,.36)]',
   secondary: 'text-text bg-surface border border-border hover:bg-surface-2',
   ghost: 'text-text-2 hover:bg-surface-2 hover:text-text',
   danger: 'text-white bg-danger hover:brightness-110',

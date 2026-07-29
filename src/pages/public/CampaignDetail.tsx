@@ -285,7 +285,7 @@ export default function CampaignDetail() {
 
           <Link
             to={`/campaigns/${campaign.slug}/donate`}
-            className="rounded-xl bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] py-[15px] text-center font-sans text-[15.5px] font-semibold text-white no-underline shadow-[0_8px_32px_rgba(79,70,229,.28)]"
+            className="rounded-xl bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] py-[15px] text-center font-sans text-[15.5px] font-semibold text-white no-underline shadow-[0_8px_32px_rgba(63,122,92,.28)]"
           >
             Give {format(selectedAmount)}
           </Link>

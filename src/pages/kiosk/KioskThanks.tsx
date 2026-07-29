@@ -32,7 +32,7 @@ export default function KioskThanks() {
   return (
     <div
       className="flex min-h-screen flex-col items-center justify-center gap-8 px-10 py-16 text-center text-white"
-      style={{ background: 'linear-gradient(135deg,#08060F,#1a1040,#3b1550)' }}
+      style={{ background: 'linear-gradient(135deg,#0A120B,#12241A,#1C3628)' }}
     >
       <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[rgba(52,211,153,0.15)] text-[#34D399]">
         <Check size={34} strokeWidth={2.5} />
@@ -64,7 +64,7 @@ export default function KioskThanks() {
             cy="32"
             r={RADIUS}
             fill="none"
-            stroke="#818CF8"
+            stroke="#8FCBA0"
             strokeWidth="5"
             strokeLinecap="round"
             strokeDasharray={CIRCUMFERENCE}

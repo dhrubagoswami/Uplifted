@@ -41,7 +41,7 @@ function AuthShell({
   return (
     <div className="mx-auto flex w-full max-w-[520px] flex-col justify-center px-20 py-16">
       <Link to="/" className="mb-12 flex items-center gap-2.5 no-underline">
-        <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3]" />
+        <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
         <span className="font-display text-lg font-bold text-text">Uplifted</span>
       </Link>
 
@@ -69,7 +69,7 @@ function SubmitButton({ label, loadingLabel }: { label: string; loadingLabel: st
     <button
       type="submit"
       disabled={isLoading}
-      className="rounded-[10px] bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] py-3.5 text-center font-sans text-[15px] font-semibold text-white disabled:opacity-60"
+      className="rounded-[10px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] py-3.5 text-center font-sans text-[15px] font-semibold text-white disabled:opacity-60"
     >
       {isLoading ? loadingLabel : label}
     </button>

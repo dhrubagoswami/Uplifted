@@ -125,7 +125,7 @@ export default function Home() {
           <div className="mt-2 flex gap-3.5">
             <Link
               to="/campaigns"
-              className="rounded-xl bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] px-[26px] py-[15px] font-sans text-[15.5px] font-semibold text-white no-underline shadow-[0_8px_32px_rgba(79,70,229,.28)]"
+              className="rounded-xl bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] px-[26px] py-[15px] font-sans text-[15.5px] font-semibold text-white no-underline shadow-[0_8px_32px_rgba(63,122,92,.28)]"
             >
               Explore campaigns
             </Link>
@@ -203,7 +203,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] px-5 sm:px-8 lg:px-12 py-20">
+      <section className="bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] px-5 sm:px-8 lg:px-12 py-20">
         <div className="mx-auto grid max-w-[1240px] grid-cols-2 gap-6 sm:grid-cols-4">
           {IMPACT_TILES.map((tile) => (
             <div key={tile.label} className="flex flex-col gap-1.5">

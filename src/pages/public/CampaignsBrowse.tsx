@@ -124,7 +124,7 @@ export default function CampaignsBrowse() {
             onClick={() => updateParams({ verified: verifiedOnly ? null : '1' })}
             className={cn(
               'whitespace-nowrap rounded-[10px] border px-3.5 py-2.5 font-sans text-[13.5px] font-medium',
-              verifiedOnly ? 'border-primary bg-surface-2 text-primary' : 'border-border bg-surface text-text',
+              verifiedOnly ? 'border-primary bg-accent-soft text-primary' : 'border-border bg-surface text-text',
             )}
           >
             Verified only
@@ -146,7 +146,7 @@ export default function CampaignsBrowse() {
               onClick={() => updateParams({ view: null })}
               className={cn(
                 'flex h-8 w-8 items-center justify-center rounded-[7px]',
-                view === 'grid' ? 'bg-surface-2 text-primary' : 'text-text-2',
+                view === 'grid' ? 'bg-accent-soft text-primary' : 'text-text-2',
               )}
             >
               <LayoutGrid size={15} />
@@ -157,7 +157,7 @@ export default function CampaignsBrowse() {
               onClick={() => updateParams({ view: 'list' })}
               className={cn(
                 'flex h-8 w-8 items-center justify-center rounded-[7px]',
-                view === 'list' ? 'bg-surface-2 text-primary' : 'text-text-2',
+                view === 'list' ? 'bg-accent-soft text-primary' : 'text-text-2',
               )}
             >
               <ListIcon size={15} />
@@ -174,7 +174,7 @@ export default function CampaignsBrowse() {
                 onClick={() => toggleCategory(cat.name)}
                 className={cn(
                   'flex items-center gap-1.5 rounded-full border px-3 py-[7px] font-sans text-[12.5px] font-medium',
-                  active ? 'border-primary bg-surface-2 text-primary' : 'border-border bg-transparent text-text-2',
+                  active ? 'border-primary bg-accent-soft text-primary' : 'border-border bg-transparent text-text-2',
                 )}
               >
                 <span className="h-1.5 w-1.5 rounded-full" style={{ background: cat.color }} />

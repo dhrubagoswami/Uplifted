@@ -22,7 +22,7 @@ const LEGAL_LINKS = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-surface-2/40">
+    <footer className="border-t border-border bg-footer-bg">
       <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-6 border-b border-border px-5 sm:px-8 lg:px-12 pb-10 pt-14">
         <div className="flex flex-wrap items-center gap-7">
           <span className="font-sans text-[13px] text-text-2">256-bit SSL secured</span>
@@ -37,7 +37,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 px-5 sm:px-8 lg:px-12 pt-10 sm:grid-cols-2 md:grid-cols-5">
         <div className="flex flex-col gap-3.5">
           <div className="flex items-center gap-2.5">
-            <span className="h-[26px] w-[26px] rounded-lg bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3]" />
+            <span className="h-[26px] w-[26px] rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
             <span className="font-display text-base font-bold text-text">Uplifted</span>
           </div>
           <p className="max-w-[220px] font-sans text-[13.5px] leading-relaxed text-text-2">

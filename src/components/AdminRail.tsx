@@ -56,7 +56,7 @@ export function AdminRail({ variant = 'sidebar', onNavigate }: AdminRailProps) {
       )}
     >
       <div className="flex items-center gap-2.5 border-b border-border px-4 py-[18px]">
-        <span className="h-7 w-7 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3]" />
+        <span className="h-7 w-7 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
         {showLabels && (
           <div className="min-w-0">
             <div className="truncate font-sans text-[13.5px] font-semibold text-text">{org}</div>
@@ -83,7 +83,7 @@ export function AdminRail({ variant = 'sidebar', onNavigate }: AdminRailProps) {
                     onClick={onNavigate}
                     className={cn(
                       'flex items-center gap-2.5 rounded-[9px] px-2.5 py-2.5 font-sans text-[13.5px] font-medium no-underline',
-                      active ? 'bg-surface-2 text-primary' : 'text-text-2 hover:text-text',
+                      active ? 'bg-accent-soft text-primary' : 'text-text-2 hover:text-text',
                     )}
                   >
                     <span

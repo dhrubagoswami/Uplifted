@@ -88,7 +88,7 @@ export function ProgressMeter({
       {collapsed ? (
         <div className="relative h-2.5 overflow-hidden rounded-full border border-border bg-surface-2">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#C026D3] transition-[width] duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
+            className="h-full rounded-full bg-gradient-to-r from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C] transition-[width] duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none"
             style={{ width: `${pct}%` }}
           />
         </div>
@@ -104,7 +104,7 @@ export function ProgressMeter({
                   'flex-1 rounded-sm transition-colors duration-500 motion-reduce:transition-none',
                   thin ? 'h-2' : 'h-3.5',
                   funded
-                    ? 'bg-gradient-to-r from-[#4F46E5] via-[#7C3AED] to-[#C026D3]'
+                    ? 'bg-gradient-to-r from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]'
                     : 'border border-border bg-surface-2',
                 )}
                 style={
