@@ -66,6 +66,13 @@ export async function getCampaign(slug: string): Promise<Campaign> {
   return c
 }
 
+export async function getCampaignById(id: string): Promise<Campaign> {
+  await delay()
+  const c = db.campaigns.find((x) => x.id === id)
+  if (!c) throw new ApiError(404, 'Campaign not found', 'CAMPAIGN_NOT_FOUND')
+  return c
+}
+
 export interface CreateCampaignParams {
   title: string
   orgId: string

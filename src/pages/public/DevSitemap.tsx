@@ -43,7 +43,7 @@ const ZONES: RouteZone[] = [
   {
     label: 'Admin',
     phase: 'P7',
-    done: false,
+    done: true,
     links: [
       { label: 'Org login', href: '/admin/login' },
       { label: 'Dashboard', href: '/admin' },
