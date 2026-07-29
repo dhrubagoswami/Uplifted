@@ -31,7 +31,7 @@ const ZONES: RouteZone[] = [
   {
     label: 'Donor account',
     phase: 'P6',
-    done: false,
+    done: true,
     links: [
       { label: 'Overview', href: '/account' },
       { label: 'Donations', href: '/account/donations' },
