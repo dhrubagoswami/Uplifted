@@ -32,8 +32,7 @@ Uplifted is a donation platform that lets people fund verified causes and watch 
 
 ### On-site giving kiosks
 
-- A locked-down, touch-first kiosk mode for in-person events and physical locations — big touch targets, no keyboard or mouse needed, and a rotating "raised so far today" attract screen with a live donation feed to draw people in.
-- Browse causes by category, see a simplified campaign view, and give in a few taps: choose an amount, tap or scan to pay, optionally get an emailed receipt, and a thank-you screen that auto-resets for the next donor.
+A locked-down, touch-first kiosk mode for in-person events and physical locations — reachable straight from the main site's header (**Kiosk mode**), with no keyboard or mouse needed once inside. A rotating "raised so far today" attract screen with a live donation feed draws people in; from there, donors browse causes by category, see a simplified campaign view, and give in a few taps — choose an amount, tap or scan to pay, optionally get an emailed receipt. An idle timeout resets an abandoned session automatically, and tapping the logo — present on every kiosk screen — offers a confirm-before-you-leave prompt back to the main site.
 
 ---
 
@@ -122,6 +121,43 @@ Uplifted is a donation platform that lets people fund verified causes and watch 
 
 - **Live everywhere.** Recent gifts, campaign totals, and donor counts update in real time across the donor site, the organization dashboard, and the kiosk attract screen.
 - **Impact you can count.** The signature progress meter always shows the actual number of units funded — filters, meals, surgeries, scholarships — not just a percentage.
-- **One design language, three audiences.** The same visual system adapts from a warm public donation site to a dense operational dashboard to a locked-down touch kiosk.
+- **One design language, three audiences.** The same visual system adapts from a warm public donation site to a dense operational dashboard to a locked-down touch kiosk, all built on a shared sage-green token system with full light/dark support.
 - **Built for both hands.** Every screen — from the four-step donation flow to the admin data tables — is responsive down to a phone screen and accessible by keyboard, with visible focus states and screen-reader-friendly labels throughout.
 - **Light and dark, ₹ and $.** Every page respects the chosen theme and currency, including the kiosk, which stays permanently dark for legibility in bright public spaces.
+
+---
+
+## How it's built
+
+Uplifted is a **frontend-only** build — there's no server. A typed mock data layer stands in for a real API so the whole product experience is real and interactive today, and swaps for a live backend later without touching a single component.
+
+```
+Component  →  React Query hook  →  api service function  →  in-memory mock DB
+                                    ^^^^^^^^^^^^^^^^^^^^^
+                          the only layer a real backend replaces
+```
+
+- Every service function in `src/api/` is `async`, typed, and throws on failure — exactly like a real fetch call would, including simulated network latency.
+- Writes actually mutate the mock database, so donating moves the campaign total, the donor count, and the live ticker for real.
+- Money is stored as integer paise everywhere and only formatted at render, so currency conversion and Indian digit grouping are consistent site-wide.
+
+**Stack:** Vite · React 18 · TypeScript (strict, no `any`) · React Router v6 · TanStack Query v5 · Tailwind CSS v3 · React Hook Form + Zod · Recharts · hand-built UI primitives (no component library)
+
+**Zones:** a public donor site, a donor account dashboard, an organization admin back office, and a locked-down touch kiosk — four layouts, one shared design system, route-level code splitting so the kiosk and admin bundles never ship to a public visitor.
+
+---
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173`. Any email/password combination signs in — try the donor flow at `/login` or the org back office at `/admin/login`.
+
+```bash
+npm run build     # production build
+npm run lint       # eslint
+npm run preview    # serve the production build locally
+```
