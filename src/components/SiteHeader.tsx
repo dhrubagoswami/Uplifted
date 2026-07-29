@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, Search, X } from 'lucide-react'
+import { Menu, MonitorPlay, Search, X } from 'lucide-react'
 import { useTheme } from '../hooks/useTheme'
 import { useCurrency } from '../hooks/useCurrency'
 import { ThemeToggle } from './ui/ThemeToggle'
@@ -79,6 +79,13 @@ export function SiteHeader({ heroMode = false }: SiteHeaderProps) {
           >
             <Search size={18} />
           </Link>
+          <Link
+            to="/kiosk"
+            className="flex items-center gap-1.5 rounded-[10px] border border-border px-3 py-2 font-sans text-[13.5px] font-medium text-text-2 no-underline hover:border-primary hover:text-primary"
+          >
+            <MonitorPlay size={16} />
+            Kiosk mode
+          </Link>
           <CurrencyToggle currency={currency} onToggle={toggleCurrency} />
           <ThemeToggle dark={dark} onToggle={toggleDark} />
           <Link
@@ -148,6 +155,14 @@ export function SiteHeader({ heroMode = false }: SiteHeaderProps) {
             )
           })}
         </nav>
+        <Link
+          to="/kiosk"
+          onClick={() => setMenuOpen(false)}
+          className="flex items-center gap-2 rounded-lg border border-border px-3 py-3 font-sans text-[15px] font-medium text-text-2 no-underline hover:text-primary"
+        >
+          <MonitorPlay size={17} />
+          Kiosk mode
+        </Link>
         <div className="flex items-center gap-3 border-t border-border pt-4">
           <CurrencyToggle currency={currency} onToggle={toggleCurrency} />
           <ThemeToggle dark={dark} onToggle={toggleDark} />
