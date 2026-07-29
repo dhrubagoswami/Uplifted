@@ -6,6 +6,7 @@ import { useCurrency } from '../hooks/useCurrency'
 import { ThemeToggle } from './ui/ThemeToggle'
 import { CurrencyToggle } from './ui/CurrencyToggle'
 import { Drawer } from './ui/Drawer'
+import { Logo } from './ui/Logo'
 import { cn } from '../lib/cn'
 
 export interface SiteHeaderProps {
@@ -46,7 +47,7 @@ export function SiteHeader({ heroMode = false }: SiteHeaderProps) {
     >
       <div className="mx-auto flex h-[76px] max-w-[1240px] items-center justify-between gap-4 px-5 sm:px-8 lg:gap-6 lg:px-12">
         <Link to="/" className="flex flex-shrink-0 items-center gap-2.5 no-underline">
-          <span className="h-[30px] w-[30px] flex-shrink-0 rounded-[9px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
+          <Logo size={30} />
           <span className="font-display text-[19px] font-bold tracking-[-0.02em] text-text">
             Uplifted
           </span>
@@ -116,7 +117,10 @@ export function SiteHeader({ heroMode = false }: SiteHeaderProps) {
 
       <Drawer open={menuOpen} onClose={() => setMenuOpen(false)}>
         <div className="mb-2 flex items-center justify-between">
-          <span className="font-display text-lg font-bold text-text">Uplifted</span>
+          <span className="flex items-center gap-2.5">
+            <Logo size={26} />
+            <span className="font-display text-lg font-bold text-text">Uplifted</span>
+          </span>
           <button
             type="button"
             aria-label="Close menu"

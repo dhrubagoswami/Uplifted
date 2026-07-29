@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Input } from './ui/Input'
 import { Button } from './ui/Button'
+import { Logo } from './ui/Logo'
 
 const GIVE_LINKS = [
   { label: 'Browse campaigns', href: '/campaigns' },
@@ -37,7 +38,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 px-5 sm:px-8 lg:px-12 pt-10 sm:grid-cols-2 md:grid-cols-5">
         <div className="flex flex-col gap-3.5">
           <div className="flex items-center gap-2.5">
-            <span className="h-[26px] w-[26px] rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
+            <Logo size={26} />
             <span className="font-display text-base font-bold text-text">Uplifted</span>
           </div>
           <p className="max-w-[220px] font-sans text-[13.5px] leading-relaxed text-text-2">

@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import { Avatar } from './ui/Avatar'
+import { Logo } from './ui/Logo'
 import { cn } from '../lib/cn'
 
 const NAV_ITEMS = [
@@ -20,7 +21,7 @@ export function AccountRail() {
     <div className="flex flex-shrink-0 flex-col gap-1 border-b border-border bg-surface-2/40 p-3 lg:min-h-screen lg:w-[220px] lg:border-b-0 lg:border-r">
       <div className="mb-1 flex items-center justify-between gap-2.5 px-1 py-1 lg:mb-5 lg:flex-col lg:items-stretch lg:px-2 lg:py-0">
         <Link to="/" className="flex items-center gap-2.5 px-2 py-2 no-underline">
-          <span className="h-6 w-6 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
+          <Logo size={24} />
           <span className="font-display text-[15px] font-bold text-text">Uplifted</span>
         </Link>
         <div className="flex items-center gap-2 px-1 lg:hidden">

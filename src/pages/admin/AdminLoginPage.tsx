@@ -3,6 +3,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/useAuth'
 import { Input } from '../../components/ui/Input'
+import { Logo } from '../../components/ui/Logo'
 import { loginSchema } from '../../lib/validators'
 import type { LoginFormValues } from '../../lib/validators'
 
@@ -24,7 +25,7 @@ export default function AdminLoginPage() {
     <div className="dark flex min-h-screen items-center justify-center bg-bg p-6">
       <div className="w-full max-w-[400px] rounded-[20px] border border-border bg-surface p-9 shadow-[0_20px_60px_rgba(0,0,0,.6)]">
         <div className="mb-7 flex items-center gap-2.5">
-          <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0]" />
+          <Logo size={28} />
           <span className="font-display text-[17px] font-bold text-text">Uplifted</span>
           <span className="ml-auto rounded-md bg-surface-2 px-2 py-1 font-sans text-[11px] font-semibold uppercase tracking-[0.06em] text-text-2">
             Org admin

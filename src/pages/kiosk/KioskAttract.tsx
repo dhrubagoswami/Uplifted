@@ -4,6 +4,7 @@ import { useDonationTicker } from '../../hooks/useDonationTicker'
 import { useCurrency } from '../../hooks/useCurrency'
 import { DonationTicker } from '../../components/campaign/DonationTicker'
 import { Skeleton } from '../../components/ui/Skeleton'
+import { Logo } from '../../components/ui/Logo'
 
 export default function KioskAttract() {
   const { format } = useCurrency()
@@ -21,7 +22,7 @@ export default function KioskAttract() {
       }}
     >
       <div className="flex items-center gap-2.5">
-        <span className="h-8 w-8 rounded-[9px] bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#8FCBA0]" />
+        <Logo size={32} />
         <span className="font-display text-[22px] font-bold">Uplifted</span>
       </div>
 

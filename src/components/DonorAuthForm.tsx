@@ -4,6 +4,7 @@ import type { FormEvent, ReactNode } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
 import { Input } from './ui/Input'
+import { Logo } from './ui/Logo'
 import { loginSchema, signupSchema, type LoginFormValues, type SignupFormValues } from '../lib/validators'
 
 export interface DonorAuthFormProps {
@@ -41,7 +42,7 @@ function AuthShell({
   return (
     <div className="mx-auto flex w-full max-w-[520px] flex-col justify-center px-20 py-16">
       <Link to="/" className="mb-12 flex items-center gap-2.5 no-underline">
-        <span className="h-7 w-7 rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
+        <Logo size={28} />
         <span className="font-display text-lg font-bold text-text">Uplifted</span>
       </Link>
 

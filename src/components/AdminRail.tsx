@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth'
+import { Logo } from './ui/Logo'
 import { cn } from '../lib/cn'
 
 interface NavGroup {
@@ -56,7 +57,7 @@ export function AdminRail({ variant = 'sidebar', onNavigate }: AdminRailProps) {
       )}
     >
       <div className="flex items-center gap-2.5 border-b border-border px-4 py-[18px]">
-        <span className="h-7 w-7 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#3F7A5C] via-[#5B9E77] to-[#7FBF8C]" />
+        <Logo size={28} />
         {showLabels && (
           <div className="min-w-0">
             <div className="truncate font-sans text-[13.5px] font-semibold text-text">{org}</div>
