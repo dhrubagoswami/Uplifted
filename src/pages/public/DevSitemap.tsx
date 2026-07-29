@@ -62,7 +62,7 @@ const ZONES: RouteZone[] = [
   {
     label: 'Kiosk',
     phase: 'P8',
-    done: false,
+    done: true,
     links: [
       { label: 'Attract', href: '/kiosk' },
       { label: 'Browse', href: '/kiosk/browse' },
