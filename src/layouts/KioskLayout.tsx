@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import { useIdleTimeout } from '../hooks/useIdleTimeout'
 import { Modal } from '../components/ui/Modal'
 import { Button } from '../components/ui/Button'
@@ -7,7 +7,6 @@ import { Logo } from '../components/ui/Logo'
 
 export function KioskLayout() {
   const navigate = useNavigate()
-  const location = useLocation()
   const [exitPromptOpen, setExitPromptOpen] = useState(false)
 
   useEffect(() => {
@@ -19,21 +18,17 @@ export function KioskLayout() {
 
   const { warning, reset } = useIdleTimeout(60_000, () => navigate('/kiosk'))
 
-  const onAttractScreen = location.pathname === '/kiosk'
-
   return (
     <div className="min-h-screen bg-bg text-text">
-      {!onAttractScreen && (
-        <button
-          type="button"
-          aria-label="Exit kiosk mode"
-          onClick={() => setExitPromptOpen(true)}
-          className="fixed left-5 top-5 z-40 flex items-center justify-center rounded-xl bg-surface/80 p-1.5 shadow-[0_4px_20px_rgba(0,0,0,.35)] backdrop-blur-sm"
-          style={{ minWidth: 44, minHeight: 44 }}
-        >
-          <Logo size={32} />
-        </button>
-      )}
+      <button
+        type="button"
+        aria-label="Exit kiosk mode"
+        onClick={() => setExitPromptOpen(true)}
+        className="fixed left-5 top-5 z-40 flex items-center justify-center rounded-xl bg-surface/80 p-1.5 shadow-[0_4px_20px_rgba(0,0,0,.35)] backdrop-blur-sm"
+        style={{ minWidth: 44, minHeight: 44 }}
+      >
+        <Logo size={32} />
+      </button>
 
       <Outlet />
 
