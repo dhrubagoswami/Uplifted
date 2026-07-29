@@ -81,7 +81,7 @@ function AccountSettingsForm({ profile }: { profile: DonorUser }) {
           </div>
           <div className="flex flex-col divide-y divide-border rounded-[14px] border border-border bg-surface">
             <div className="flex items-center justify-between px-4.5 py-3.5">
-              <span className="font-mono text-[13.5px] text-text">UPI · ananya@okhdfc</span>
+              <span className="font-mono text-[13.5px] text-text">UPI · dhruba@okhdfc</span>
               <span className="font-sans text-xs text-text-2">Default</span>
             </div>
             <div className="flex items-center justify-between px-4.5 py-3.5">

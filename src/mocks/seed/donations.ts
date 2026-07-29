@@ -8,14 +8,14 @@ function daysAgoIso(days: number, hours = 0): string {
   return new Date(Date.now() - days * 86_400_000 - hours * 3_600_000).toISOString()
 }
 
-// Indices in `donors` reserved for Ananya Rao (CURRENT_DONOR), so a handful of
-// donations are attributed to the one logged-in demo donor for /account screens.
-const ANANYA_DONATION_INDICES = new Set([0, 4, 9, 15, 22])
+// Indices in `donors` reserved for the current logged-in demo donor
+// (CURRENT_DONOR), so a handful of donations are attributed to them for /account screens.
+const CURRENT_DONOR_DONATION_INDICES = new Set([0, 4, 9, 15, 22])
 
 export const donations: Donation[] = Array.from({ length: 40 }).map((_, i) => {
-  const anon = i % 6 === 0 && !ANANYA_DONATION_INDICES.has(i)
+  const anon = i % 6 === 0 && !CURRENT_DONOR_DONATION_INDICES.has(i)
   const campaign = campaigns[i % campaigns.length]
-  const donor = ANANYA_DONATION_INDICES.has(i) ? donors[0] : donors[1 + (i % (donors.length - 1))]
+  const donor = CURRENT_DONOR_DONATION_INDICES.has(i) ? donors[0] : donors[1 + (i % (donors.length - 1))]
   const amount = [50000, 100000, 200000, 280000, 500000, 1000000, 2400000][i % 7]
   const units = Math.max(1, Math.round(amount / campaign.unitCost))
 
