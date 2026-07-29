@@ -7,6 +7,7 @@ import { AccountLayout } from './layouts/AccountLayout'
 import { AdminLayout } from './layouts/AdminLayout'
 import { KioskLayout } from './layouts/KioskLayout'
 import { Spinner } from './components/ui/Spinner'
+import { DonationFlowProvider } from './contexts/DonationFlowContext'
 
 const Home = lazy(() => import('./pages/public/Home'))
 const CampaignsBrowse = lazy(() => import('./pages/public/CampaignsBrowse'))
@@ -68,7 +69,14 @@ export const router = createBrowserRouter([
       { path: '/', element: withSuspense(<Home />) },
       { path: '/campaigns', element: withSuspense(<CampaignsBrowse />) },
       { path: '/campaigns/:slug', element: withSuspense(<CampaignDetail />) },
-      { path: '/campaigns/:slug/donate', element: withSuspense(<DonationFlow />) },
+      {
+        path: '/campaigns/:slug/donate',
+        element: (
+          <DonationFlowProvider>
+            {withSuspense(<DonationFlow />)}
+          </DonationFlowProvider>
+        ),
+      },
       { path: '/donation/success/:id', element: withSuspense(<DonationSuccess />) },
       { path: '/organizations/:slug', element: withSuspense(<OrganizationProfile />) },
       { path: '/how-it-works', element: withSuspense(<HowItWorks />) },

@@ -11,7 +11,7 @@ const ZONES: RouteZone[] = [
   {
     label: 'Public',
     phase: 'P4',
-    done: false,
+    done: true,
     links: [
       { label: 'Home', href: '/' },
       { label: 'Browse campaigns', href: '/campaigns' },
