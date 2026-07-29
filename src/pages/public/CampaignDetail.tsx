@@ -64,7 +64,7 @@ export default function CampaignDetail() {
 
   if (campaignQuery.isPending) {
     return (
-      <div className="mx-auto max-w-[1240px] px-12 py-8">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 py-8">
         <Skeleton className="aspect-[21/9] w-full rounded-[20px]" />
         <div className="mt-8 grid grid-cols-1 gap-12 lg:grid-cols-[1.6fr_1fr]">
           <Skeleton className="h-96 w-full" />
@@ -76,7 +76,7 @@ export default function CampaignDetail() {
 
   if (campaignQuery.isError || !campaign) {
     return (
-      <div className="mx-auto max-w-[1240px] px-12 py-24">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 py-24">
         <ErrorState
           title="Campaign not found"
           description="This campaign may have been removed or the link is incorrect."
@@ -90,7 +90,7 @@ export default function CampaignDetail() {
 
   return (
     <div>
-      <div className="mx-auto max-w-[1240px] px-12 pt-8">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pt-8">
         <div className="relative aspect-[21/9] overflow-hidden rounded-[20px] bg-surface-2">
           <img src={coverImage(campaign.slug)} alt="" className="h-full w-full object-cover" />
           <div className="absolute left-5 top-5 flex gap-2">
@@ -106,7 +106,7 @@ export default function CampaignDetail() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 px-12 py-8 lg:grid-cols-[1.6fr_1fr] lg:items-start">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 px-5 sm:px-8 lg:px-12 py-8 lg:grid-cols-[1.6fr_1fr] lg:items-start">
         <div className="flex min-w-0 flex-col gap-7">
           <div>
             <h1 className="mb-3 font-display text-[36px] font-semibold tracking-[-0.02em] text-text">
@@ -318,7 +318,7 @@ export default function CampaignDetail() {
       </div>
 
       {similar.length > 0 && (
-        <div className="mx-auto max-w-[1240px] px-12 pb-24">
+        <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pb-24">
           <h2 className="mb-6 font-display text-2xl font-semibold text-text">Similar campaigns</h2>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {similar.map((c) => (

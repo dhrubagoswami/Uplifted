@@ -75,7 +75,7 @@ const ZONES: RouteZone[] = [
 
 export default function DevSitemap() {
   return (
-    <div className="mx-auto max-w-[1240px] px-12 py-16">
+    <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 py-16">
       <h1 className="font-display text-[28px] font-semibold text-text">Uplifted — sitemap</h1>
       <p className="mt-2 mb-8 font-sans text-sm text-text-2">
         Every route in the app, for demo navigation. Zones not yet built show a placeholder

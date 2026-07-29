@@ -102,7 +102,7 @@ export default function Home() {
 
   if (isError) {
     return (
-      <div className="mx-auto max-w-[1240px] px-12 py-24">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 py-24">
         <ErrorState onRetry={() => campaignsQuery.refetch()} />
       </div>
     )
@@ -110,7 +110,7 @@ export default function Home() {
 
   return (
     <div>
-      <section className="relative mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-16 px-12 pb-24 pt-[120px] lg:grid-cols-[1.1fr_0.9fr]">
+      <section className="relative mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-16 px-5 sm:px-8 lg:px-12 pb-24 pt-[120px] lg:grid-cols-[1.1fr_0.9fr]">
         <div className="flex flex-col gap-6">
           <div className="font-sans text-[12.5px] font-bold uppercase tracking-[0.1em] text-primary">
             Verified giving
@@ -168,7 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1240px] px-12 pb-24">
+      <section className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pb-24">
         <div className="mb-8 flex items-baseline justify-between">
           <h2 className="font-display text-[30px] font-semibold tracking-[-0.01em] text-text">
             Featured campaigns
@@ -186,7 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1240px] px-12 pb-24">
+      <section className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pb-24">
         <h2 className="mb-10 text-center font-display text-[30px] font-semibold tracking-[-0.01em] text-text">
           How it works
         </h2>
@@ -203,7 +203,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] px-12 py-20">
+      <section className="bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3] px-5 sm:px-8 lg:px-12 py-20">
         <div className="mx-auto grid max-w-[1240px] grid-cols-2 gap-6 sm:grid-cols-4">
           {IMPACT_TILES.map((tile) => (
             <div key={tile.label} className="flex flex-col gap-1.5">
@@ -214,7 +214,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-16 px-12 py-24 lg:grid-cols-2">
+      <section className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-16 px-5 sm:px-8 lg:px-12 py-24 lg:grid-cols-2">
         <div className="flex flex-col gap-4">
           <div className="flex w-fit items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1.5">
             <span className="h-1.5 w-1.5 rounded-full bg-success" />
@@ -246,7 +246,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1240px] px-12 pb-24">
+      <section className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pb-24">
         <h2 className="mb-7 text-center font-display text-2xl font-semibold text-text">Browse by cause</h2>
         <div className="flex flex-wrap justify-center gap-3">
           {CATEGORIES.map((cat) => (
@@ -262,7 +262,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1240px] px-12 pb-24">
+      <section className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pb-24">
         <h2 className="mb-7 text-center font-display text-2xl font-semibold text-text">
           What donors and partners say
         </h2>

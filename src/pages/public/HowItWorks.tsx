@@ -69,7 +69,7 @@ function PathCard({ heading, steps }: { heading: string; steps: typeof DONOR_PAT
 export default function HowItWorks() {
   return (
     <div>
-      <div className="mx-auto max-w-[1240px] px-12 pt-16 text-center">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pt-16 text-center">
         <h1 className="mb-3 font-display text-[44px] font-semibold tracking-[-0.02em] text-text">
           How Uplifted works
         </h1>
@@ -78,12 +78,12 @@ export default function HowItWorks() {
         </p>
       </div>
 
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 px-12 pb-24 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-12 px-5 sm:px-8 lg:px-12 pb-24 lg:grid-cols-2">
         <PathCard heading="For donors" steps={DONOR_PATH} />
         <PathCard heading="For organizations" steps={ORG_PATH} />
       </div>
 
-      <div className="mx-auto max-w-[820px] px-12 pb-24">
+      <div className="mx-auto max-w-[820px] px-5 sm:px-8 lg:px-12 pb-24">
         <h2 className="mb-6 text-center font-display text-[26px] font-semibold text-text">
           Where your rupee goes
         </h2>
@@ -104,7 +104,7 @@ export default function HowItWorks() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[820px] px-12 pb-24">
+      <div className="mx-auto max-w-[820px] px-5 sm:px-8 lg:px-12 pb-24">
         <h2 className="mb-8 text-center font-display text-[26px] font-semibold text-text">
           Verification process
         </h2>
@@ -124,7 +124,7 @@ export default function HowItWorks() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1240px] px-12 pb-24">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pb-24">
         <div className="grid grid-cols-2 gap-6 rounded-[20px] border border-border bg-surface p-10 text-center sm:grid-cols-4">
           {SECURITY_ITEMS.map((item) => (
             <div key={item.title}>

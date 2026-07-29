@@ -33,7 +33,7 @@ export default function DonationFlow() {
 
   if (campaignQuery.isPending) {
     return (
-      <div className="mx-auto max-w-[920px] px-12 py-10">
+      <div className="mx-auto max-w-[920px] px-5 sm:px-8 lg:px-12 py-10">
         <Skeleton className="mb-10 h-8 w-full" />
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.5fr_1fr]">
           <Skeleton className="h-96 w-full" />
@@ -45,7 +45,7 @@ export default function DonationFlow() {
 
   if (campaignQuery.isError || !campaign) {
     return (
-      <div className="mx-auto max-w-[680px] px-12 py-24">
+      <div className="mx-auto max-w-[680px] px-5 sm:px-8 lg:px-12 py-24">
         <ErrorState
           title="Campaign not found"
           description="This campaign may have been removed or the link is incorrect."
@@ -132,7 +132,7 @@ export default function DonationFlow() {
   }
 
   return (
-    <div className="mx-auto max-w-[920px] px-12 pb-24 pt-10">
+    <div className="mx-auto max-w-[920px] px-5 sm:px-8 lg:px-12 pb-24 pt-10">
       <div className="mb-5 font-sans text-[13.5px] text-text-2">
         Giving to{' '}
         <Link to={`/campaigns/${campaign.slug}`} className="font-semibold text-text no-underline">

@@ -88,7 +88,7 @@ export default function CampaignsBrowse() {
 
   return (
     <div>
-      <div className="mx-auto max-w-[1240px] px-12 pt-12">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pt-12">
         <h1 className="mb-2 font-display text-[40px] font-semibold tracking-[-0.02em] text-text">
           Browse campaigns
         </h1>
@@ -98,7 +98,7 @@ export default function CampaignsBrowse() {
       </div>
 
       <div className="sticky top-[76px] z-30 border-b border-border bg-bg/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-[1240px] flex-wrap items-center gap-3 px-12 py-4">
+        <div className="mx-auto flex max-w-[1240px] flex-wrap items-center gap-3 px-5 sm:px-8 lg:px-12 py-4">
           <div className="relative min-w-[220px] flex-1">
             <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-text-2" />
             <input
@@ -164,7 +164,7 @@ export default function CampaignsBrowse() {
             </button>
           </div>
         </div>
-        <div className="mx-auto flex max-w-[1240px] flex-wrap gap-2.5 px-12 pb-3.5">
+        <div className="mx-auto flex max-w-[1240px] flex-wrap gap-2.5 px-5 sm:px-8 lg:px-12 pb-3.5">
           {CATEGORY_DEFS.map((cat) => {
             const active = categories.includes(cat.name)
             return (
@@ -185,7 +185,7 @@ export default function CampaignsBrowse() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[1240px] px-12 pb-24 pt-8">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pb-24 pt-8">
         {campaignsQuery.isError && <ErrorState onRetry={() => campaignsQuery.refetch()} />}
 
         {campaignsQuery.isPending && (

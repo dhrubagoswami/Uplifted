@@ -33,7 +33,7 @@ export default function SearchResults() {
 
   return (
     <div>
-      <div className="mx-auto max-w-[820px] px-12 pt-14">
+      <div className="mx-auto max-w-[820px] px-5 sm:px-8 lg:px-12 pt-14">
         <div className="relative mb-2">
           <Search size={18} className="absolute left-[15px] top-1/2 -translate-y-1/2 text-text-2" />
           <input
@@ -49,7 +49,7 @@ export default function SearchResults() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-[820px] px-12 pb-24">
+      <div className="mx-auto max-w-[820px] px-5 sm:px-8 lg:px-12 pb-24">
         {isError && <ErrorState onRetry={() => campaignsQuery.refetch()} />}
 
         {!isError && isPending && debouncedQuery && (

@@ -5,7 +5,7 @@ export interface PagePlaceholderProps {
 
 export function PagePlaceholder({ title, phase }: PagePlaceholderProps) {
   return (
-    <div className="mx-auto flex max-w-[1240px] flex-col items-start gap-2 px-12 py-24">
+    <div className="mx-auto flex max-w-[1240px] flex-col items-start gap-2 px-5 sm:px-8 lg:px-12 py-24">
       <div className="rounded-full bg-surface-2 px-3 py-1 font-sans text-xs font-semibold text-text-2">
         {phase}
       </div>

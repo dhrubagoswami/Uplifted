@@ -23,7 +23,7 @@ const LEGAL_LINKS = [
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-surface-2/40">
-      <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-6 border-b border-border px-12 pb-10 pt-14">
+      <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-6 border-b border-border px-5 sm:px-8 lg:px-12 pb-10 pt-14">
         <div className="flex flex-wrap items-center gap-7">
           <span className="font-sans text-[13px] text-text-2">256-bit SSL secured</span>
           <span className="font-sans text-[13px] text-text-2">PCI-DSS Level 1</span>
@@ -34,7 +34,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 px-12 pt-10 sm:grid-cols-2 md:grid-cols-5">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-8 px-5 sm:px-8 lg:px-12 pt-10 sm:grid-cols-2 md:grid-cols-5">
         <div className="flex flex-col gap-3.5">
           <div className="flex items-center gap-2.5">
             <span className="h-[26px] w-[26px] rounded-lg bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3]" />
@@ -62,7 +62,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-3 px-12 pb-8 pt-10">
+      <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-3 px-5 sm:px-8 lg:px-12 pb-8 pt-10">
         <div className="font-sans text-[12.5px] text-text-2">© 2026 Uplifted. All rights reserved.</div>
         <div className="font-sans text-[12.5px] text-text-2">Made for verified causes across India.</div>
       </div>

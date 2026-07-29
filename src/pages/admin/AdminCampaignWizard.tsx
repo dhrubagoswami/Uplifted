@@ -214,12 +214,17 @@ function CampaignWizardForm({
           {step === 1 && (
             <div className="flex flex-col gap-4">
               <div>
-                <label className="mb-1.5 block font-sans text-[13px] text-text-2">Campaign title</label>
-                <Input value={state.title} onChange={(e) => update({ title: e.target.value })} />
+                <label htmlFor="wizard-title" className="mb-1.5 block font-sans text-[13px] text-text-2">
+                  Campaign title
+                </label>
+                <Input id="wizard-title" value={state.title} onChange={(e) => update({ title: e.target.value })} />
               </div>
               <div>
-                <label className="mb-1.5 block font-sans text-[13px] text-text-2">Category</label>
+                <label htmlFor="wizard-category" className="mb-1.5 block font-sans text-[13px] text-text-2">
+                  Category
+                </label>
                 <Select
+                  id="wizard-category"
                   value={state.category}
                   onChange={(e) => update({ category: e.target.value as Category })}
                 >
@@ -231,8 +236,11 @@ function CampaignWizardForm({
                 </Select>
               </div>
               <div>
-                <label className="mb-1.5 block font-sans text-[13px] text-text-2">Short description</label>
+                <label htmlFor="wizard-description" className="mb-1.5 block font-sans text-[13px] text-text-2">
+                  Short description
+                </label>
                 <Textarea
+                  id="wizard-description"
                   rows={3}
                   value={state.description}
                   onChange={(e) => update({ description: e.target.value })}
@@ -244,8 +252,11 @@ function CampaignWizardForm({
           {step === 2 && (
             <div className="flex flex-col gap-4">
               <div>
-                <label className="mb-1.5 block font-sans text-[13px] text-text-2">Funding goal (₹)</label>
+                <label htmlFor="wizard-goal" className="mb-1.5 block font-sans text-[13px] text-text-2">
+                  Funding goal (₹)
+                </label>
                 <Input
+                  id="wizard-goal"
                   value={state.goal}
                   onChange={(e) => update({ goal: e.target.value.replace(/[^0-9]/g, '') })}
                   inputMode="numeric"
@@ -253,12 +264,21 @@ function CampaignWizardForm({
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="mb-1.5 block font-sans text-[13px] text-text-2">Impact unit name</label>
-                  <Input value={state.unitLabel} onChange={(e) => update({ unitLabel: e.target.value })} />
+                  <label htmlFor="wizard-unit-label" className="mb-1.5 block font-sans text-[13px] text-text-2">
+                    Impact unit name
+                  </label>
+                  <Input
+                    id="wizard-unit-label"
+                    value={state.unitLabel}
+                    onChange={(e) => update({ unitLabel: e.target.value })}
+                  />
                 </div>
                 <div>
-                  <label className="mb-1.5 block font-sans text-[13px] text-text-2">Cost per unit (₹)</label>
+                  <label htmlFor="wizard-unit-cost" className="mb-1.5 block font-sans text-[13px] text-text-2">
+                    Cost per unit (₹)
+                  </label>
                   <Input
+                    id="wizard-unit-cost"
                     value={state.unitCost}
                     onChange={(e) => update({ unitCost: e.target.value.replace(/[^0-9]/g, '') })}
                     inputMode="numeric"

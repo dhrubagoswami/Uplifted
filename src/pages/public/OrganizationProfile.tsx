@@ -54,7 +54,7 @@ export default function OrganizationProfile() {
 
   if (orgQuery.isPending) {
     return (
-      <div className="mx-auto max-w-[1240px] px-12 py-12">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 py-12">
         <Skeleton className="h-24 w-full" />
       </div>
     )
@@ -62,7 +62,7 @@ export default function OrganizationProfile() {
 
   if (orgQuery.isError || !org) {
     return (
-      <div className="mx-auto max-w-[1240px] px-12 py-24">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 py-24">
         <ErrorState
           title="Organization not found"
           description="This organization may have been removed or the link is incorrect."
@@ -75,7 +75,7 @@ export default function OrganizationProfile() {
   return (
     <div>
       <div className="h-[200px] bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3]" />
-      <div className="mx-auto max-w-[1240px] px-12">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12">
         <div className="-mt-11 mb-7 flex items-end gap-5">
           <div className="flex h-24 w-24 items-center justify-center rounded-[20px] border-4 border-bg bg-surface font-display text-[32px] font-bold text-primary">
             {org.name.charAt(0)}

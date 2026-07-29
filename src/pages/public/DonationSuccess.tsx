@@ -25,7 +25,7 @@ export default function DonationSuccess() {
 
   if (donationQuery.isPending) {
     return (
-      <div className="mx-auto max-w-[680px] px-12 py-24">
+      <div className="mx-auto max-w-[680px] px-5 sm:px-8 lg:px-12 py-24">
         <Skeleton className="h-96 w-full" />
       </div>
     )
@@ -33,7 +33,7 @@ export default function DonationSuccess() {
 
   if (donationQuery.isError || !donation) {
     return (
-      <div className="mx-auto max-w-[680px] px-12 py-24">
+      <div className="mx-auto max-w-[680px] px-5 sm:px-8 lg:px-12 py-24">
         <ErrorState
           title="We couldn't find this receipt"
           description="The donation link may be incorrect or the record has expired."
@@ -43,7 +43,7 @@ export default function DonationSuccess() {
   }
 
   return (
-    <div className="relative mx-auto flex max-w-[680px] flex-col items-center gap-7 px-12 py-20 text-center">
+    <div className="relative mx-auto flex max-w-[680px] flex-col items-center gap-7 px-5 sm:px-8 lg:px-12 py-20 text-center">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-80 overflow-hidden">
         {CONFETTI.map((p, i) => (
           <div

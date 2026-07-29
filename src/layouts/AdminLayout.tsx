@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { RequireAuth } from '../components/RequireAuth'
 import { AdminRail } from '../components/AdminRail'
 import { AdminTopbar } from '../components/AdminTopbar'
+import { Drawer } from '../components/ui/Drawer'
 
 const BREADCRUMBS: { test: RegExp; label: string }[] = [
   { test: /^\/admin\/campaigns\/new$/, label: 'New campaign' },
@@ -23,18 +25,22 @@ function breadcrumbFor(pathname: string): string {
 
 export function AdminLayout() {
   const location = useLocation()
+  const [navOpen, setNavOpen] = useState(false)
 
   return (
     <RequireAuth role="admin">
       <div className="flex min-h-screen bg-bg">
         <AdminRail />
         <div className="flex min-w-0 flex-1 flex-col">
-          <AdminTopbar breadcrumb={breadcrumbFor(location.pathname)} />
-          <div className="flex-1 p-7">
+          <AdminTopbar breadcrumb={breadcrumbFor(location.pathname)} onOpenNav={() => setNavOpen(true)} />
+          <div className="flex-1 p-4 sm:p-7">
             <Outlet />
           </div>
         </div>
       </div>
+      <Drawer open={navOpen} onClose={() => setNavOpen(false)} className="max-w-[280px] p-0">
+        <AdminRail variant="drawer" onNavigate={() => setNavOpen(false)} />
+      </Drawer>
     </RequireAuth>
   )
 }

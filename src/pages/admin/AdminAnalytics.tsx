@@ -130,7 +130,8 @@ export default function AdminAnalytics() {
         {retentionQuery.isPending && <Skeleton className="h-32 w-full" />}
         {retentionQuery.isError && <ErrorState onRetry={() => retentionQuery.refetch()} />}
         {retentionQuery.data && (
-          <div className="grid grid-cols-[80px_repeat(6,1fr)] gap-1">
+          <div className="overflow-x-auto">
+          <div className="grid min-w-[480px] grid-cols-[80px_repeat(6,1fr)] gap-1">
             {retentionQuery.data.map((row) => (
               <Fragment key={row.cohort}>
                 <div className="flex items-center font-sans text-[11.5px] text-text-2">{row.cohort}</div>
@@ -154,6 +155,7 @@ export default function AdminAnalytics() {
                 })}
               </Fragment>
             ))}
+          </div>
           </div>
         )}
       </div>

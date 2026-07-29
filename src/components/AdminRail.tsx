@@ -29,22 +29,35 @@ const GROUPS: NavGroup[] = [
   { label: 'Settings', items: [{ label: 'Settings', href: '/admin/settings' }] },
 ]
 
-export function AdminRail() {
+export interface AdminRailProps {
+  /** Renders as a static block without the collapse toggle, for use inside a mobile Drawer. */
+  variant?: 'sidebar' | 'drawer'
+  onNavigate?: () => void
+}
+
+export function AdminRail({ variant = 'sidebar', onNavigate }: AdminRailProps) {
   const [expanded, setExpanded] = useState(true)
   const location = useLocation()
   const { user } = useAuth()
   const org = user?.role === 'admin' ? user.org : ''
+  const isDrawer = variant === 'drawer'
+  const showLabels = isDrawer || expanded
 
   return (
     <div
       className={cn(
-        'flex min-h-screen flex-shrink-0 flex-col border-r border-border bg-surface-2/40 transition-[width] duration-200',
-        expanded ? 'w-[240px]' : 'w-16',
+        'flex flex-shrink-0 flex-col border-border bg-surface-2/40',
+        isDrawer
+          ? 'w-full'
+          : cn(
+              'hidden min-h-screen border-r transition-[width] duration-200 lg:flex',
+              expanded ? 'w-[240px]' : 'w-16',
+            ),
       )}
     >
       <div className="flex items-center gap-2.5 border-b border-border px-4 py-[18px]">
         <span className="h-7 w-7 flex-shrink-0 rounded-lg bg-gradient-to-br from-[#4F46E5] via-[#7C3AED] to-[#C026D3]" />
-        {expanded && (
+        {showLabels && (
           <div className="min-w-0">
             <div className="truncate font-sans text-[13.5px] font-semibold text-text">{org}</div>
             <div className="font-sans text-[11.5px] text-text-2">Org admin</div>
@@ -55,7 +68,7 @@ export function AdminRail() {
       <div className="flex flex-1 flex-col gap-5 overflow-y-auto p-2.5">
         {GROUPS.map((group) => (
           <div key={group.label}>
-            {expanded && (
+            {showLabels && (
               <div className="px-2.5 pb-2 font-sans text-[11px] font-semibold uppercase tracking-[0.06em] text-text-2">
                 {group.label}
               </div>
@@ -67,6 +80,7 @@ export function AdminRail() {
                   <Link
                     key={item.href}
                     to={item.href}
+                    onClick={onNavigate}
                     className={cn(
                       'flex items-center gap-2.5 rounded-[9px] px-2.5 py-2.5 font-sans text-[13.5px] font-medium no-underline',
                       active ? 'bg-surface-2 text-primary' : 'text-text-2 hover:text-text',
@@ -78,7 +92,7 @@ export function AdminRail() {
                         active ? 'bg-primary' : 'bg-text-2',
                       )}
                     />
-                    {expanded && <span className="truncate">{item.label}</span>}
+                    {showLabels && <span className="truncate">{item.label}</span>}
                   </Link>
                 )
               })}
@@ -87,13 +101,15 @@ export function AdminRail() {
         ))}
       </div>
 
-      <button
-        type="button"
-        onClick={() => setExpanded((e) => !e)}
-        className="m-2.5 rounded-[9px] border border-border px-2.5 py-2.5 font-sans text-xs text-text-2"
-      >
-        {expanded ? '← Collapse' : '→'}
-      </button>
+      {!isDrawer && (
+        <button
+          type="button"
+          onClick={() => setExpanded((e) => !e)}
+          className="m-2.5 rounded-[9px] border border-border px-2.5 py-2.5 font-sans text-xs text-text-2"
+        >
+          {expanded ? '← Collapse' : '→'}
+        </button>
+      )}
     </div>
   )
 }

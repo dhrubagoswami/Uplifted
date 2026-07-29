@@ -15,7 +15,7 @@ const TEAM = [
 export default function About() {
   return (
     <div>
-      <div className="mx-auto max-w-[820px] px-12 pt-20 text-center">
+      <div className="mx-auto max-w-[820px] px-5 sm:px-8 lg:px-12 pt-20 text-center">
         <h1 className="mb-5 font-display text-[44px] font-semibold tracking-[-0.02em] text-text">
           Giving deserves proof.
         </h1>
@@ -27,7 +27,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className="mx-auto grid max-w-[1240px] grid-cols-2 gap-6 px-12 pb-24 sm:grid-cols-4">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-2 gap-6 px-5 sm:px-8 lg:px-12 pb-24 sm:grid-cols-4">
         {NUMBERS.map((n) => (
           <div key={n.label} className="rounded-2xl border border-border bg-surface px-4 py-7 text-center">
             <div className="font-display text-[32px] font-bold text-text">{n.value}</div>
@@ -36,7 +36,7 @@ export default function About() {
         ))}
       </div>
 
-      <div className="mx-auto max-w-[1240px] px-12 pb-24">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-8 lg:px-12 pb-24">
         <h2 className="mb-8 text-center font-display text-[26px] font-semibold text-text">Team</h2>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
           {TEAM.map((m) => (

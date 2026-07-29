@@ -60,6 +60,7 @@ export default function AdminDonations() {
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2">
           <Select
+            aria-label="Filter by status"
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value as 'all' | DonationStatus)}
             className="w-auto"
@@ -70,6 +71,7 @@ export default function AdminDonations() {
             <option value="Refunded">Refunded</option>
           </Select>
           <Select
+            aria-label="Filter by payment method"
             value={methodFilter}
             onChange={(e) => setMethodFilter(e.target.value as 'all' | PaymentMethod)}
             className="w-auto"

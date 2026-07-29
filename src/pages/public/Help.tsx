@@ -38,7 +38,7 @@ const FAQS = [
 
 export default function Help() {
   return (
-    <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-14 px-12 py-16 lg:grid-cols-[1.4fr_1fr]">
+    <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-14 px-5 sm:px-8 lg:px-12 py-16 lg:grid-cols-[1.4fr_1fr]">
       <div>
         <h1 className="mb-8 font-display text-[36px] font-semibold tracking-[-0.02em] text-text">
           Help &amp; FAQ
