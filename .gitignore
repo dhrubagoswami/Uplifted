@@ -28,6 +28,7 @@ dist-ssr
 
 # Claude Code / agent tooling
 .claude
+CLAUDE.md
 
 # Design handoff bundle (not part of the built app)
 design
